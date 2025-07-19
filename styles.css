@@ -1,0 +1,221 @@
+/* fonts body */
+
+@font-face {
+  font-family: "Bison";
+  src: url("font/bisonbold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lemon";
+  src: url("font/dklemonyellow.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: "Lemon", sans-serif;
+  background-color: #dfdcd8;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background: url("header3.png") no-repeat center/cover;
+  min-height: 100px;
+  color: white;
+  position: relative;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .logo img {
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+}
+
+/* dual images body */
+
+.dual-background::before,
+.dual-background::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  height: calc(100px + 100vh);
+  display: block;
+  z-index: -1;
+}
+
+.dual-background::before {
+  left: 0;
+  width: 55vw;
+  background: url("Industrial.png") no-repeat left center/cover;
+
+  -webkit-mask-image: linear-gradient(to right, black 65%, transparent 100%);
+  mask-image: linear-gradient(to right, black 65%, transparent 100%);
+}
+
+.dual-background::after {
+  right: 0;
+  width: 55vw;
+  background: url("Nature.png") no-repeat right center/cover;
+
+  -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
+  mask-image: linear-gradient(to left, black 65%, transparent 100%);
+}
+
+@media (max-width: 600px) {
+  .dual-background::before,
+  .dual-background::after {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60vh;
+    position: fixed;
+  }
+
+  .dual-background::before {
+    top: 0;
+    background-position: top center;
+
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  }
+
+  .dual-background::after {
+    top: auto;
+    bottom: 0;
+    background-position: bottom center;
+
+    -webkit-mask-image: linear-gradient(to top, black 65%, transparent 100%);
+    mask-image: linear-gradient(to top, black 65%, transparent 100%);
+  }
+}
+/* main content */
+
+.main-content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  width: 80%;
+  max-width: 800px;
+}
+@media (max-width: 800px) {
+  .main-content {
+    top: 20%;
+  }
+  .content-image {
+    height: 100px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .main-content {
+    top: 30%;
+  }
+  .content-image {
+    height: 150px !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 400px) {
+  .main-content {
+    top: 40%;
+  }
+  .content-image {
+    height: 150px !important;
+    margin-top: 0 !important;
+  }
+  .content-heading {
+    font-family: "Bison", sans-serif;
+    font-size: 25px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .content-subheading {
+    font-family: "Lemon", sans-serif;
+    font-size: 0.5rem;
+    margin-top: 0;
+  }
+}
+
+.content-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.content-section.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content-heading {
+  font-family: "Bison", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-subheading {
+  font-family: "Lemon", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.content-image {
+  max-width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.nav-links a.active-link {
+  font-weight: bold;
+  color: #ffd700;
+}
