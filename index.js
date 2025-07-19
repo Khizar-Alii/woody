@@ -6,23 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const targetId = e.target.dataset.target + "-content";
-
-      const currentActiveContent = document.querySelector(
-        ".content-section.active"
-      );
-      if (currentActiveContent) {
-        currentActiveContent.classList.remove("active");
-      }
-
-      navLinks.forEach((navLink) => navLink.classList.remove("active-link"));
-
+      navLinks.forEach((nav) => nav.classList.remove("active-link"));
       e.target.classList.add("active-link");
 
-      const newActiveContent = document.getElementById(targetId);
-      if (newActiveContent) {
-        newActiveContent.classList.add("active");
-      }
+      const targetId = e.target.dataset.target + "-content";
+
+      contentSections.forEach((section) => {
+        if (section.id === targetId) {
+          section.classList.add("active");
+        } else {
+          section.classList.remove("active");
+        }
+      });
     });
   });
 });
