@@ -229,26 +229,18 @@ body {
   }
 
   .content-section {
-    padding-top: 20px;
+    padding-top: 40px;
     width: 90%;
   }
 
   .content-image {
-    height: 150px !important;
-    margin-top: 0 !important;
+    height: 150px;
   }
 }
 
 @media (max-width: 400px) {
-  .content-image {
-    height: 150px !important;
-    margin-top: 0 !important;
-  }
-
   .content-heading {
-    font-family: "Bison", sans-serif;
     font-size: 25px !important;
-    margin-bottom: 0 !important;
   }
 }
 
