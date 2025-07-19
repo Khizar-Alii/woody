@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Bison";
-  src: url("public/Font/bisonbold.ttf") format("truetype");
+  src: url("/bisonbold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Lemon";
-  src: url("/public/Font/dklemonyellow.otf") format("opentype");
+  src: url("/dklemonyellow.otf") format("opentype");
 }
 
 body {
@@ -200,7 +200,7 @@ body {
 }
 
 .content-heading {
-  font-family: "Bison", sans-serif;
+  font-family: "Lemon", sans-serif;
   font-size: 3rem;
   margin-bottom: 0.5rem;
   width: 100%;
@@ -274,6 +274,7 @@ body {
   font-size: 18px;
   transition: color 0.3s ease;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .footer-links:hover {
@@ -283,7 +284,6 @@ body {
 @media (max-width: 600px) {
   .footer {
     padding: 15px 20px;
-    justify-content: center;
     gap: 20px;
   }
 }
