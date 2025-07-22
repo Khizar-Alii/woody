@@ -87,7 +87,7 @@ body {
 @media (min-width: 2700px) {
   .navbar {
     padding: 4rem 8rem;
-    min-height: 12rem;
+    min-height: 13rem !important;
   }
   .logotext {
     font-size: 6rem;
@@ -103,7 +103,7 @@ body {
 @media (min-width: 2000px) {
   .navbar {
     padding: 2rem 6rem;
-    min-height: 8rem;
+    min-height: 10rem !important;
     background-size: cover;
   }
 
@@ -123,7 +123,7 @@ body {
 @media (max-width: 1440px) {
   .navbar {
     padding: 1.5rem 4rem;
-    min-height: 7rem;
+    min-height: 8rem !important;
   }
 
   .logotext {
