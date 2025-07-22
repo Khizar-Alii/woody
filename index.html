@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woody</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seamless Background</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -14,77 +14,83 @@
             <h2 class="logotext">Prism RealM</h2>
         </div>
         <div class="nav-links">
-            <a href="#" data-target="home" class="active-link">Home</a>
-            <a href="#" data-target="about">About</a>
+            <a href="#home" data-target="home" class="active-link" aria-current="page">Home</a>
+            <a href="#about" data-target="about">About</a>
         </div>
     </nav>
-    <div class="dual-background">
-        <main class="main-content">
-            <!-- HOME CONTENT -->
-            <div id="home-content" class="content-section active">
-                <div class="text-block">
-                    <h2 class="section-title">Welcome to the World of Little Woody</h2>
-                    <p class="section-paragraph">
-                        Step into a heartfelt adventure with Little Woody, a 2D puzzle-story game that blends
-                        hand-crafted visuals,
-                        brain-teasing puzzles, and an emotionally captivating journey.
-                    </p>
-                </div>
-
-                <div class="text-block">
-                    <h2 class="section-title">Explore. Solve. Remember.</h2>
-                    <p class="section-paragraph">
-                        Guide Little Woody, the last of his kind, through a mysterious world filled with curious
-                        machines and forgotten memories.
-                        With every puzzle you solve, a piece of his past is revealed, drawing you closer to the truth.
-                    </p>
-                </div>
-
-                <div class="text-block">
-                    <h2 class="section-title">Why Wishlist on Steam?</h2>
-                    <p class="section-paragraph">
-                        Your Wishlist helps us bring Little Woody to more players and ensures you’re notified as soon as
-                        the game launches.
-                        Support our indie team and be among the first to experience this one-of-a-kind adventure.
-                    </p>
-                    <strong>To do so, simply tap on Little Woody!</strong>
-                </div>
-                <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" class="woody-link">
-                    <img src="logo5.png" alt="Little Woody Portrait" class="woody-image-btm">
-                </a>
-            </div>
-
-            <!-- ABOUT CONTENT -->
-            <div id="about-content" class="content-section">
-                <div class="text-block">
-                    <h2 class="section-title">Prism Realm Ltd.</h2>
-                    <p class="section-paragraph">
-                        We are a passionate indie game studio dedicated to creating immersive and memorable experiences.
-                        Based in Montreal, Canada, our team of six talented developers, artists, and designers is
-                        committed to delivering
-                        high-quality, handcrafted games with heart.
-                    </p>
-                </div>
-
-                <div class="text-block" id="aboutcon">
-                    <h2 class="section-title">Contact Us</h2>
-                    <p class="section-paragraph">
-                        For any queries, collaborations, or media requests, feel free to reach out at:
-                        <a href="mailto:info@prismrealm.com" class="email-link">info@prismrealm.com</a>
-                    </p>
-                </div>
-            </div>
-
-        </main>
+    <div class="background-container">
+        <div class="background-half background-left"></div>
+        <div class="background-half background-right"></div>
+        <div class="background-blend-overlay"></div>
     </div>
-            <div class="footer">
-            <a href="https://www.linkedin.com/company/prism-realm-ltd" target="_blank" class="footer-links">
-                <img src="InBug-White.png" alt="" srcset="">
+
+    <main class="main-content">
+        <!-- HOME CONTENT -->
+        <section id="home-content" class="content-section active" aria-labelledby="home-heading">
+            <div class="text-block">
+                <h2 class="section-title">Welcome to the World of Little Woody</h2>
+                <p class="section-paragraph">
+                    Step into a heartfelt adventure with Little Woody, a 2D puzzle-story game that blends
+                    hand-crafted visuals, brain-teasing puzzles, and an emotionally captivating journey.
+                </p>
+            </div>
+
+            <div class="text-block">
+                <h2 class="section-title">Explore. Solve. Remember.</h2>
+                <p class="section-paragraph">
+                    Guide Little Woody, the last of his kind, through a mysterious world filled with curious
+                    machines and forgotten memories. With every puzzle you solve, a piece of his past is revealed.
+                </p>
+            </div>
+
+            <div class="text-block">
+                <h2 class="section-title">Why Wishlist on Steam?</h2>
+                <p class="section-paragraph">
+                    Your Wishlist helps us bring Little Woody to more players and ensures you're notified as soon as
+                    the game launches. Support our indie team and be among the first to experience this adventure.
+                </p>
+                <strong>To do so, simply tap on Little Woody!</strong>
+            </div>
+
+            <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" class="woody-link"
+                aria-label="Visit Little Woody on Steam">
+                <img src="logo5.png" alt="Little Woody character" class="woody-image-btm" width="220" height="220"
+                    loading="lazy">
             </a>
-            <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" class="footer-links">
-                <img src="steamicon.png" alt="">
-            </a>
-        </div>
+            <img src="Char_LW_Front.png" alt="" class="homeimgicon" width="200" height="200" loading="lazy">
+        </section>
+
+        <!-- ABOUT CONTENT -->
+        <section id="about-content" class="content-section" aria-labelledby="about-heading">
+            <div class="text-block">
+                <h2 class="section-title">Prism Realm Ltd.</h2>
+                <p class="section-paragraph">
+                    We are a passionate indie game studio dedicated to creating immersive and memorable experiences.
+                    Based in Montreal, Canada, our team of six talented developers, artists, and designers is
+                    committed to delivering high-quality, handcrafted games with heart.
+                </p>
+            </div>
+
+            <div class="text-block">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-paragraph">
+                    For any queries, collaborations, or media requests, feel free to reach out at:
+                    <a href="mailto:info@prismrealm.com" class="email-link">info@prismrealm.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.linkedin.com/company/prism-realm-ltd" target="_blank" class="footer-links"
+            aria-label="Visit our LinkedIn">
+            <img src="LI-In-Bug.png" alt="LinkedIn logo" width="24" height="24" loading="lazy">
+        </a>
+        <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" class="footer-links"
+            aria-label="Visit our Steam page">
+            <img src="steamicon.png" alt="Steam logo" width="24" height="24" loading="lazy">
+        </a>
+    </footer>
 
     <script src="index.js"></script>
 </body>
