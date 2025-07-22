@@ -10,6 +10,11 @@
   src: url("/dklemonyellow.otf") format("opentype");
 }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "Lemon", sans-serif;
@@ -18,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -34,6 +40,7 @@ body {
   padding: 10px 40px;
   background: url("header3.png") no-repeat center/cover;
   min-height: 100px;
+  height: auto;
   color: white;
   position: relative;
   z-index: 10;
@@ -73,7 +80,17 @@ body {
 .nav-links a.active-link::after {
   width: 100%;
 }
+@media (min-width: 1500px) {
+  .navbar {
+    min-height: 200px;
+  }
+}
 
+@media (max-width: 600px) {
+  .navbar {
+    min-height: 130px;
+  }
+}
 @media (max-width: 600px) {
   .navbar {
     display: flex;
@@ -98,14 +115,11 @@ body {
 
 .dual-background {
   flex-grow: 1;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertically center content */
-  align-items: center; /* Horizontally center content */
-  overflow: hidden;
-  margin-top: -100px; /* pulls it up behind the navbar */
-  padding-top: 100px; /* to avoid content being hidden under navbar */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center;  */
+  /* align-items: center; */
+  /* position: relative; */
 }
 
 .dual-background::before,
@@ -120,7 +134,7 @@ body {
 
 .dual-background::before {
   left: 0;
-  width: 55vw;
+  width: 50vw;
   background: url("Industrial.png") no-repeat left top/cover;
   -webkit-mask-image: linear-gradient(to right, black 50%, transparent 90%);
   mask-image: linear-gradient(to right, black 50%, transparent 90%);
@@ -128,7 +142,7 @@ body {
 
 .dual-background::after {
   right: 0;
-  width: 55vw;
+  width: 50vw;
   background: url("Nature.png") no-repeat right top/cover;
   -webkit-mask-image: linear-gradient(to left, black 50%, transparent 90%);
   mask-image: linear-gradient(to left, black 50%, transparent 90%);
@@ -155,18 +169,19 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .dual-background::before,
-  .dual-background::after {
-    width: 50vw;
-  }
-
+@media (max-width: 500px) {
   .dual-background::before {
-    background-position: left center;
+    display: none;
   }
 
   .dual-background::after {
-    background-position: right center;
+    padding: 0 !important;
+    width: 100vw;
+    min-height: calc(100vh);
+    background-position: center;
+    -webkit-mask-image: none;
+    mask-image: none;
+    background-size: cover;
   }
 }
 
@@ -181,7 +196,7 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  position: relative; /* Needed for absolutely positioned children */
+  /* position: relative; */
 }
 
 .content-section {
@@ -199,7 +214,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 0;
-  box-sizing: border-box; /* Include padding in width calculation */
+  box-sizing: border-box; 
 }
 
 .content-section.active {
@@ -211,19 +226,28 @@ body {
   transform: none;
 }
 
+#about-content.content-section.active {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .content-heading {
   font-family: "Lemon", sans-serif;
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   width: 100%;
   max-width: 400px;
-  margin: 0 auto 0.5rem;
+  /* margin: 0 auto 0.5rem; */
 }
 
 .content-image {
   max-width: 100%;
   height: 200px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .content-image-logo {
@@ -232,7 +256,7 @@ body {
 
 .nav-links a.active-link {
   font-weight: bold;
-  color: #855e41;
+  /* color: #855e41; */
 }
 
 /* Custom text sections */
@@ -240,6 +264,8 @@ body {
   text-align: center;
   width: 100%;
   max-width: 700px;
+  gap: 10px;
+  padding: 5px 0;
 }
 
 .section-title {
@@ -257,23 +283,18 @@ body {
   color: #333;
 }
 
-/* Call-to-action button for Steam */
-.cta-button {
-  display: inline-block;
-  background-color: #5c3d2e;
-  color: #fff;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-family: "Lemon", sans-serif;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+.woody-image-btm {
+  width: 220px;
+  height: auto;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #855e41;
+.woody-image-btm:hover {
+  transform: scale(1.05);
 }
+
 
 /* Email link styling */
 .email-link {
@@ -320,7 +341,9 @@ body {
   box-sizing: border-box;
   flex-shrink: 0;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
+  /* position: fixed; */
+  /* bottom: 0; */
 }
 
 .footer-links {
@@ -329,9 +352,10 @@ body {
 }
 
 .footer-links img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   transition: opacity 0.3s;
+  background-size: cover;
 }
 
 @media (max-width: 600px) {
