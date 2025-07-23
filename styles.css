@@ -336,9 +336,7 @@ body {
   .nav-links a {
     font-size: 1.5rem;
   }
-  .main-content {
-    max-width: 1200px;
-  }
+  
   .section-title,
   .strong_desc {
     font-size: 25px;
@@ -371,9 +369,7 @@ body {
   .nav-links a {
     font-size: 1.4rem;
   }
-  .main-content {
-    max-width: 900px;
-  }
+  
   .section-title,
   .strong_desc {
     font-size: 16px;
