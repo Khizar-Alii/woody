@@ -190,8 +190,8 @@ body {
 }
 
 .woody-image-btm {
-  width: clamp(10rem, 20vw, 18rem);
-  height: 70px;
+  width: clamp(8rem, 20vw, 18rem);
+  height: 60px;
   margin: 0 auto;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -218,7 +218,6 @@ body {
 
 .footer {
   background: url("Website_BG.png") no-repeat center/cover;
-  padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
