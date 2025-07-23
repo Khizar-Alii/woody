@@ -338,7 +338,6 @@ body {
   }
   .main-content {
     max-width: 1200px;
-    padding: 2rem;
   }
   .section-title,
   .strong_desc {
@@ -374,7 +373,6 @@ body {
   }
   .main-content {
     max-width: 900px;
-    padding: 1.5rem;
   }
   .section-title,
   .strong_desc {
@@ -448,9 +446,7 @@ body {
   .nav-links a {
     font-size: 1rem;
   }
-  .main-content {
-    padding: 0.8rem;
-  }
+  
   .section-title,
   .strong_desc {
     font-size: 14px;
