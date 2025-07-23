@@ -115,22 +115,7 @@ body {
   mask-image: linear-gradient(to left, black 40%, transparent 60%);
 }
 
-@media (max-width: 1199.98px) {
-  .background-half {
-    background-attachment: scroll;
-    background-position: center center;
-  }
 
-  .background-left {
-    -webkit-mask-image: linear-gradient(to right, black 50%, transparent 80%);
-    mask-image: linear-gradient(to right, black 50%, transparent 80%);
-  }
-
-  .background-right {
-    -webkit-mask-image: linear-gradient(to left, black 50%, transparent 80%);
-    mask-image: linear-gradient(to left, black 50%, transparent 80%);
-  }
-}
 
 .main-content {
   flex: 1;
@@ -294,7 +279,7 @@ body {
   }
   .main-content {
     max-width: 1400px;
-    padding: 3rem;
+    /* padding: 3rem; */
   }
   .content-section.active {
     min-height: calc(75vh - 6rem);
