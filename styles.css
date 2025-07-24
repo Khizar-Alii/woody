@@ -170,16 +170,15 @@ body {
 
 .strong_desc {
   font-size: 16px;
-  font-family: "Bison", sans-serif;
 }
 
 .woody-image-btm {
   width: clamp(8rem, 20vw, 18rem);
   height: 60px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 20px auto;
 }
 
 .homeimgicon {
